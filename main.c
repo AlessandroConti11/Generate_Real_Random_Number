@@ -15,19 +15,20 @@
  */
 int generateRandom(int min, int max) {
     /**
-     * Storing an open file descriptor on /dev/random, so we do not need to open the file every time.
+     * Storing an open file descriptor on /dev/random.
+     * So we do not need to open the file every time.
      */
     static int devRandom = -1;
     /**
-     * The next Byte to read from the buffer.
+     * The pointer to the buffer where the read bytes will be stored.
      */
     char *nextRandomByte = NULL;
     /**
-     * Number of Bytes to read from the buffer.
+     * The number of Bytes to read from the buffer.
      */
     int byte2Read = 0;
     /**
-     * Actual random value.
+     * The random value.
      */
     unsigned int randomValue = 0;
     /**
@@ -55,11 +56,11 @@ int generateRandom(int min, int max) {
     //loop until we have read enough Bytes.
     // /dev/random is filled from user-generation action
     do {
-        //read the actual integer random value
+        //read the specified number of bytes from the /dev/random file into the buffer
         bytesRead = read(devRandom, nextRandomByte, byte2Read);
-        //reduce the Bytes to read buffer
+        //reduce the Bytes to read from buffer
         byte2Read -= bytesRead;
-        //add the bytes read
+        //update the pointer to the next buffer position
         nextRandomByte += bytesRead;
     } while (byte2Read > 0);
 
