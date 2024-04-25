@@ -30,7 +30,7 @@ int generateRandom(int min, int max) {
     /**
      * The random value.
      */
-    unsigned int randomValue = 0;
+    int randomValue = 0;
     /**
      * Random integer value read.
      */
