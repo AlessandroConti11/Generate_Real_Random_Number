@@ -26,9 +26,16 @@ To ensure that the project works properly, you must compile it and run it in a U
     gcc -Wall -Werror -O2 -g3 main.c -o EXECUTABLE 
     ```
 2. run the project
-    ```bash
-    ./EXECUTABLE
-    ```
+    - with entering the arguments from the command line
+      ```bash
+      ./EXECUTABLE MIN MAX
+      ```
+    - without entering the arguments from the command line
+      ```bash
+      ./EXECUTABLE
+      # at the beginning you will be asked to enter the minimum and maximum value
+      ```
+    
 
 <br>
 
