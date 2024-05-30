@@ -5,7 +5,7 @@ Author: Alessandro Conti - [AlessandroConti11](https://github.com/AlessandroCont
 
 License: [MIT license](LICENSE).
 
-Tags: `#/dev/random`, `#C`, `#computer_security`, `#Linux`,  `#random_number`, `#software_engineering`.
+Tags: `#/dev/random`, `#C`, `#computer_engineering`, `#computer_security`, `#Linux`,  `#random_number`.
 
 
 ## Specification
